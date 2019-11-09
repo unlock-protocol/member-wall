@@ -1,0 +1,34 @@
+{
+  "name": "member-wall",
+  "version": "1.0.0",
+  "description": "This is a web service which given a lock address will serve a SVG file including all of the jazzicons for the members of that lock.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julien51/member-wall.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julien51/member-wall/issues"
+  },
+  "homepage": "https://github.com/julien51/member-wall#readme",
+  "dependencies": {
+    "express": "4.17.1",
+    "react": "16.11.0",
+    "react-dom": "16.11.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.7.0",
+    "@babel/core": "7.7.2",
+    "@babel/node": "7.7.0",
+    "@babel/plugin-proposal-class-properties": "7.7.0",
+    "@babel/plugin-transform-runtime": "7.6.2",
+    "@babel/polyfill": "7.7.0",
+    "@babel/preset-env": "7.7.1",
+    "@babel/preset-react": "7.7.0"
+  }
+}
