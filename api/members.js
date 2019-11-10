@@ -236,20 +236,7 @@ const Members = ({ members, maxWidth, maxHeight, urlTemplate }) => {
   )
 }
 
-const app = express()
-
-app.get("/", async (req, res) => {
-  res
-    .status(200)
-    .send(
-      "Render keys owners for a lock as a SVG file! Use /members?locks[]=lockAddress&locks[]=lockAddress ..."
-    )
-})
-
-/**
- * This routes requires at least locks=lockAddress
- */
-app.get("/members", async (req, res) => {
+module.exports = async (req, res) => {
   if (!req.query.locks.length) {
     return res.redirect("/")
   }
@@ -263,9 +250,4 @@ app.get("/members", async (req, res) => {
         <Members maxWidth={maxWidth} maxHeight={maxHeight} members={members} />
       )
     )
-})
-
-const port = process.env.PORT || 3030
-app.listen(port, function listenHandler() {
-  console.info(`Running on ${port}...`)
-})
+}
