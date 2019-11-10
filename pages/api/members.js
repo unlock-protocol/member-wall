@@ -12,10 +12,10 @@ import ColorScheme from "color-scheme"
  * @param {*} locks
  */
 const query = locks => `{
-    locks(first:999 where: {
+    locks(where: {
       address_in: ${JSON.stringify(locks)}
     }) {
-    keys {
+     keys(first: 1000) {
       owner {
         address
       }
