@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/julien51/member-wall#readme",
   "dependencies": {
+    "color-scheme": "1.0.1",
     "express": "4.17.1",
+    "node-fetch": "2.6.0",
     "react": "16.11.0",
     "react-dom": "16.11.0"
   },
