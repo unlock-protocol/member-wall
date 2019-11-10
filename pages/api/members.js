@@ -31,7 +31,6 @@ const query = locks => `{
  * Returns all of the keys for a given lock
  */
 const getMembers = async locks => {
-  console.log(locks)
   const response = await fetch(
     "https://api.thegraph.com/subgraphs/name/unlock-protocol/unlock",
     {
@@ -220,7 +219,7 @@ const Members = ({ members, maxWidth, maxHeight, urlTemplate }) => {
   const memberSide = maxMemberSide
 
   return (
-    <svg height={maxHeight} width={maxWidth}>
+    <svg xmlns="http://www.w3.org/2000/svg" height={maxHeight} width={maxWidth}>
       {members.map((member, index) => {
         const x = index % byRow
         const y = Math.floor(index / byRow)
@@ -251,6 +250,6 @@ module.exports = async (req, res) => {
   const content = renderToString(
     <Members maxWidth={maxWidth} maxHeight={maxHeight} members={members} />
   )
-  res.setHeader("Content-Type", "text/html")
+  res.setHeader("Content-Type", "image/svg+xml")
   res.status(200).send(content)
 }
