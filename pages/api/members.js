@@ -31,6 +31,7 @@ const query = locks => `{
  * Returns all of the keys for a given lock
  */
 const getMembers = async locks => {
+  console.log(locks)
   const response = await fetch(
     "https://api.thegraph.com/subgraphs/name/unlock-protocol/unlock",
     {
@@ -237,17 +238,19 @@ const Members = ({ members, maxWidth, maxHeight, urlTemplate }) => {
 }
 
 module.exports = async (req, res) => {
-  if (!req.query.locks.length) {
-    return res.redirect("/")
+  let locks = []
+  if (req.query.locks) {
+    locks = req.query.locks.split(",")
+  }
+  if (!locks.length) {
+    return res.status("422").send("Please make sure you have `locks=0x123`")
   }
   const maxWidth = req.query.maxWidth || 800
   const maxHeight = req.query.maxHeight || 500
-  const members = await getMembers(req.query.locks)
-  res
-    .status(200)
-    .send(
-      renderToString(
-        <Members maxWidth={maxWidth} maxHeight={maxHeight} members={members} />
-      )
-    )
+  const members = await getMembers(locks)
+  const content = renderToString(
+    <Members maxWidth={maxWidth} maxHeight={maxHeight} members={members} />
+  )
+  res.setHeader("Content-Type", "text/html")
+  res.status(200).send(content)
 }
