@@ -31,9 +31,9 @@ export const Members = ({ members, maxWidth, maxHeight, urlTemplate }) => {
         const y = Math.floor(index / byRow)
         const href = `https://etherscan.io/address/${member.owner}`
         return (
-          <a key={member.owner} href={href}>
+          <a key={member.owner} href={href} target="_blank">
             <svg x={x * memberSide} y={y * memberSide}>
-              <Member width={memberSide / 2} member={member} />
+              <Member width={(4 * memberSide) / 5} member={member} />
             </svg>
           </a>
         )

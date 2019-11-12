@@ -19,12 +19,14 @@
   },
   "homepage": "https://github.com/julien51/member-wall#readme",
   "dependencies": {
+    "color": "0.11.3",
     "color-scheme": "1.0.1",
     "express": "4.17.1",
+    "mersenne-twister": "1.1.0",
+    "next": "^9.0.2",
     "node-fetch": "2.6.0",
     "react": "16.11.0",
-    "react-dom": "16.11.0",
-    "next": "^9.0.2"
+    "react-dom": "16.11.0"
   },
   "devDependencies": {
     "@babel/cli": "7.7.0",
