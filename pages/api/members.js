@@ -19,5 +19,9 @@ module.exports = async (req, res) => {
     <Members maxWidth={maxWidth} maxHeight={maxHeight} members={members} />
   )
   res.setHeader("Content-Type", "image/svg+xml")
+  res.setHeader(
+    "Cache-Control",
+    "max-age=0, s-maxage=600, stale-while-revalidate"
+  )
   res.status(200).send(content)
 }
