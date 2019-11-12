@@ -13,13 +13,13 @@ The image below shows all of the [Unlock Blog](https://unlock-protocol.com/blog/
 
 ## Customize
 
-Just use an `<img/>` with a `src` poiting to `https://member-wall.julien51.now.sh/api/members?locks=`. Customize with the following query strings:
+Just use an `<img/>` with a `src` poiting to `https://member-wall.unlock-protocol.com/api/members/api/members?locks=`. Customize with the following query strings:
 
 - `locks` _(required)_: coma separated list of locks
 - `maxWidth` _(optional, defaults to 800)_: maximum width (actual size might be smaller to avoid clipping icons)
 - `maxHeight` _(optional, defaults to 500)_: maximum height (actual size might be smaller to avoid clipping icons)
 
-You can also use `<object data="https://member-wall.julien51.now.sh/api/members?locks=..." type="image/svg+xml"/>` to make the links on each icon clickable!
+You can also use `<object data="https://member-wall.unlock-protocol.com/api/members/api/members?locks=..." type="image/svg+xml"/>` to make the links on each icon clickable!
 
 ## TODO
 
