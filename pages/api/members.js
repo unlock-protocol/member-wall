@@ -1,5 +1,4 @@
 import React from "react"
-import express from "express"
 import { renderToString } from "react-dom/server"
 import getMembers from "../../src/getMembers"
 import Members from "../../src/Components/Members"
