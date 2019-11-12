@@ -8,7 +8,8 @@ It renders the wall as a SVG image which can easily be embedded on any image!
 
 The image below shows all of the [Unlock Blog](https://unlock-protocol.com/blog/) members!
 
-<object data="https://member-wall.unlock-protocol.com/api/members?locks=0xB0114bbDCe17e0AF91b2Be32916a1e236cf6034F&maxHeight=300" type="image/svg+xml"/>
+![Members](https://member-wall.unlock-protocol.com/api/members?locks=0xB0114bbDCe17e0AF91b2Be32916a1e236cf6034F&maxHeight=300)
+
 
 ## Customize
 
